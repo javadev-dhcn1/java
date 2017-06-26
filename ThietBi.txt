@@ -1,0 +1,86 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package model;
+
+import controller.GiaoTiep;
+import java.io.Serializable;
+
+/**
+ *
+ * @author Than
+ */
+public class ThietBi implements Serializable, GiaoTiep{
+
+    public static int size() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public static void add(ThietBi t) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    private int ID, namSX;
+    private String tenTB,  XuatXu;
+    static int id = 1000;
+    private Object getXuatXu;
+    
+    public ThietBi(){
+        ID = id++;
+    }
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+    public int getNam() {
+        return namSX;
+    }
+
+    public void setNam(int nam) {
+        this.namSX = nam;
+    }
+
+    public String getName() {
+        return tenTB;
+    }
+
+    public void setName(String name) {
+        this.tenTB = name;
+    }
+
+    public String getXuatxu() {
+        return XuatXu;
+    }
+
+    public void setXuatxu(String xuatxu) {
+        this.XuatXu = xuatxu;
+    }
+
+    @Override
+    public String toString() {
+        return "ThietBi{" + "ID= " + ID + ", nam= " + namSX + ", name= " + tenTB + ", xuatxu= " + XuatXu + '}';
+    }
+
+    @Override
+    public Object[] toObject() {
+        return new Object[]{
+            this.getID(), this.gettenTB(), this.getXuatXu, this.getnamSX()
+        };
+    }
+
+    private Object gettenTB() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private Object getnamSX() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
+}
